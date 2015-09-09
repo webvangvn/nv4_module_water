@@ -14,7 +14,7 @@ global $global_config;
 
 $xtpl = new XTemplate( "print.tpl", NV_ROOTDIR . "/themes/" . $module_info['template'] . "/modules/" . $module_file );
 $xtpl->assign( 'LANG', $lang_module );
-$xtpl->assign( 'PAGE__TITLE', $global_config['site_name'] ." - ". $page_title );
+
 $xtpl->assign( 'PAGE_URL', $global_config['my_domains']);
 
 $contents = "";
@@ -29,32 +29,32 @@ if (isset($maso) && !empty($maso))
 	$result = $db->query( $sql );
     $found = 0;
     
-    while ( $item = $result->fetch() )
+     while ( $item = $result->fetch() )
     {
-        if($maso1 == stripUnicode(chuthuong($item['sbd'])) 
-        OR $maso1 == stripUnicode(chuthuong($item['ten']))        
-        OR $maso1 == stripUnicode(chuthuong($item['ho'].' '.$item['ten']))
-        OR $maso1 == stripUnicode(chuthuong($item['lop']))
-        OR $maso1 == stripUnicode(chuthuong($item['phong'])))
+		//die('2');
+        if($maso1 == stripUnicode(chuthuong($item['mkh']))        
+        OR $maso1 == stripUnicode(chuthuong($item['hoten']))
+        OR $maso1 == stripUnicode(chuthuong($item['addnew']))
+        OR $maso1 == stripUnicode(chuthuong($item['mont'])))
         {
             $found ++;
             $data[] = array (
-                 "sbd" => $item['sbd'],
-                 "ho" => $item['ho'],
-                 "ten" => $item['ten'],
-                 "lop" => $item['lop'],
-                 "ngsinh" => $item['ngsinh'],
-                 "phong" => $item['phong'],
-                 "toan" => $item['toan'],
-                 "ly" => $item['ly'],
-                 "hoa" => $item['hoa'],
+                 "mkh" => $item['mkh'],
+                 "hoten" => $item['hoten'],
+                 "addold" => $item['addold'],
+                 "addnew" => $item['addnew'],
+                 "mobile" => $item['mobile'],
+                 "mont" => $item['mont'],
+                 "numlast" => $item['numlast'],
+                 "timelast" => $item['timelast'],
+                 "status" => $item['status'],
                  
-                 "van" => $item['van'],
-                 "su" => $item['su'],
-                 "dia" => $item['dia'],
-				"sinh" => $item['sinh'],
-                 "anh" => $item['anh'],
-                 "gd" => $item['gd']);
+                 "nummont" => $item['nummont'],
+                 "flow" => $item['flow'],
+                 "price" => $item['price'],
+				"totalmont" => $item['totalmont'],
+                 "debt" => $item['debt'],
+                 "total" => $item['total']);
          }
     }
     
@@ -65,6 +65,7 @@ if (isset($maso) && !empty($maso))
         {
             $xtpl->assign( 'TABLE', $row );
             $xtpl->parse( 'main.loop' );
+			$xtpl->assign( 'PAGE__TITLE', $lang_module['f1'] . $row['hoten'] ." (".$row['mkh'].")");
         }
         $notice="";
         if($pr == 'lop')
