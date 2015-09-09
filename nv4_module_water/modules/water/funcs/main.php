@@ -32,7 +32,7 @@ if( file_exists( $content_file ) )
 
 $maso = $nv_Request->get_title ('maso', 'post/get','');
 $pr = $nv_Request->get_title ('pr', 'post/get','');
-$print_url = NV_BASE_SITEURL . "index.php?language=vi&nv=diemex&op=print&maso=" . $maso;
+$print_url = NV_BASE_SITEURL . "index.php?language=vi&nv=".$module_data."&op=print&maso=" . $maso;
 $xtpl->assign( 'PRINT', $print_url );
 
 if (isset($maso) && !empty($maso))
@@ -51,30 +51,29 @@ if (isset($maso) && !empty($maso))
     while ( $item = $result->fetch() )
     {
 		//die('2');
-        if($maso1 == stripUnicode(chuthuong($item['sbd'])) 
-        OR $maso1 == stripUnicode(chuthuong($item['ten']))        
-        OR $maso1 == stripUnicode(chuthuong($item['ho'].' '.$item['ten']))
-        OR $maso1 == stripUnicode(chuthuong($item['lop']))
-        OR $maso1 == stripUnicode(chuthuong($item['phong'])))
+        if($maso1 == stripUnicode(chuthuong($item['mkh']))        
+        OR $maso1 == stripUnicode(chuthuong($item['hoten']))
+        OR $maso1 == stripUnicode(chuthuong($item['addnew']))
+        OR $maso1 == stripUnicode(chuthuong($item['mont'])))
         {
             $found ++;
             $data[] = array (
-                 "sbd" => $item['sbd'],
-                 "ho" => $item['ho'],
-                 "ten" => $item['ten'],
-                 "lop" => $item['lop'],
-                 "ngsinh" => $item['ngsinh'],
-                 "phong" => $item['phong'],
-                 "toan" => $item['toan'],
-                 "ly" => $item['ly'],
-                 "hoa" => $item['hoa'],
+                 "mkh" => $item['mkh'],
+                 "hoten" => $item['hoten'],
+                 "addold" => $item['addold'],
+                 "addnew" => $item['addnew'],
+                 "mobile" => $item['mobile'],
+                 "mont" => $item['mont'],
+                 "numlast" => $item['numlast'],
+                 "timelast" => $item['timelast'],
+                 "status" => $item['status'],
                  
-                 "van" => $item['van'],
-                 "su" => $item['su'],
-                 "dia" => $item['dia'],
-				"sinh" => $item['sinh'],
-                 "anh" => $item['anh'],
-                 "gd" => $item['gd']);
+                 "nummont" => $item['nummont'],
+                 "flow" => $item['flow'],
+                 "price" => $item['price'],
+				"totalmont" => $item['totalmont'],
+                 "debt" => $item['debt'],
+                 "total" => $item['total']);
          }
     }
     
@@ -85,7 +84,7 @@ if (isset($maso) && !empty($maso))
         {
             if($found == 1)
             {
-                $notice = $lang_module['f1'] . $tde['ho'] ." ". $tde['ten'] ." (".$tde['sbd'].")";
+                $notice = $lang_module['f1'] . $tde['hoten'] ." (".$tde['mkh'].")";
             }
         }
         
@@ -94,14 +93,14 @@ if (isset($maso) && !empty($maso))
             $notice = sprintf($lang_module['f2'], $found, $maso); 
         }
         
-        if($pr == 'lop')
+        if($pr == 'addnew')
         {
-            $notice = $lang_module['ht_lop'] . $maso;
+            $notice = $lang_module['ht_addnew'] . $maso;
         }
         
-        if($pr == 'phong')
+        if($pr == 'mont')
         {
-            $notice = $lang_module['ht_phong'] . $maso;
+            $notice = $lang_module['ht_mont'] . $maso;
         }
                   
         //Tieu de thong bao

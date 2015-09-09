@@ -19,25 +19,25 @@ $xtpl->assign( 'LANG', $lang_module );
 $xtpl->assign( 'IMP_ACTION', NV_BASE_ADMINURL . "index.php?" . NV_NAME_VARIABLE . "=" . $module_name . "" );
 
 $data = array();
-function add( $sbd, $ho, $ten, $lop, $ngsinh, $phong, $toan, $ly, $hoa,  $van, $su, $dia, $sinh, $anh, $gd)
+function add( $mkh, $hoten, $addold, $addnew, $mobile, $mont, $numlast, $timelast, $status,  $nummont, $flow, $price, $totalmont, $debt, $total)
 {
 	global $data;
 	$data[] = array(
-        'sbd'=>trim($sbd),
-        'ho'=>trim($ho),
-        'ten'=>trim($ten),
-        'lop'=>trim($lop),
-        'ngsinh'=>trim($ngsinh), 
-        'phong'=>trim($phong), 
-        'toan'=>$toan, 
-        'ly'=>$ly, 
-        'hoa'=>$hoa,
-        'van'=>$van,
-        'su'=>$su,
-        'dia'=>$dia,
-		'sinh'=>$sinh,
-        'anh'=>$anh,
-        'gd'=>$gd);
+        'mkh'=>trim($mkh),
+        'hoten'=>trim($hoten),
+        'addold'=>trim($addold),
+        'addnew'=>trim($addnew),
+        'mobile'=>trim($mobile), 
+        'mont'=>$mont, 
+        'numlast'=>$numlast, 
+        'timelast'=>trim($timelast), 
+        'status'=>trim($status),
+        'nummont'=>$nummont,
+        'flow'=>$flow,
+        'price'=>$price,
+		'totalmont'=>$totalmont,
+        'debt'=>$debt,
+        'total'=>$total);
 }
 
 if (isset($_FILES['file']['tmp_name']))
@@ -57,28 +57,28 @@ if (isset($_FILES['file']['tmp_name']))
                 $ind = $cell->getAttribute( 'Index' );
 				if ( $ind != null ) $index = $ind;
 
-				if ( $index == 1 ) $sbd = $cell->nodeValue;
-				if ( $index == 2 ) $ho = $cell->nodeValue;
-				if ( $index == 3 ) $ten = $cell->nodeValue;
-				if ( $index == 4 ) $lop = $cell->nodeValue;
-				if ( $index == 5 ) $ngsinh = $cell->nodeValue;
-				if ( $index == 6 ) $phong = $cell->nodeValue;
-				if ( $index == 7 ) $toan = $cell->nodeValue;
-				if ( $index == 8 ) $ly = $cell->nodeValue;
-				if ( $index == 9 ) $hoa = $cell->nodeValue;
+				if ( $index == 1 ) $mkh = $cell->nodeValue;
+				if ( $index == 2 ) $hoten = $cell->nodeValue;
+				if ( $index == 3 ) $addold = $cell->nodeValue;
+				if ( $index == 4 ) $addnew = $cell->nodeValue;
+				if ( $index == 5 ) $mobile = $cell->nodeValue;
+				if ( $index == 6 ) $mont = $cell->nodeValue;
+				if ( $index == 7 ) $numlast = $cell->nodeValue;
+				if ( $index == 8 ) $timelast = $cell->nodeValue;
+				if ( $index == 9 ) $status = $cell->nodeValue;
 				   
-				if ( $index == 10 ) $van = $cell->nodeValue;
-				if ( $index == 11 ) $su = $cell->nodeValue;
-				if ( $index == 12 ) $dia = $cell->nodeValue;
-				if ( $index == 13 ) $sinh = $cell->nodeValue;
-				if ( $index == 14 ) $anh = $cell->nodeValue;
-				if ( $index == 15 ) $gd = $cell->nodeValue;
+				if ( $index == 10 ) $nummont = $cell->nodeValue;
+				if ( $index == 11 ) $flow = $cell->nodeValue;
+				if ( $index == 12 ) $price = $cell->nodeValue;
+				if ( $index == 13 ) $totalmont = $cell->nodeValue;
+				if ( $index == 14 ) $debt = $cell->nodeValue;
+				if ( $index == 15 ) $total = $cell->nodeValue;
 				  
 				$index += 1;
             }
 
             
-            add( $sbd, $ho, $ten, $lop, $ngsinh, $phong, $toan, $ly, $hoa, $van, $su, $dia, $sinh,  $anh, $gd);
+            add( $mkh, $hoten, $addold, $addnew, $mobile, $mont, $numlast, $timelast, $status, $nummont, $flow, $price, $totalmont,  $debt, $total);
         }
         $first_row = false;
     }
@@ -87,63 +87,62 @@ if (isset($_FILES['file']['tmp_name']))
 foreach($data as $row)
 {   
     /*
-            if( ! empty( $row['ngsinh'] ) and preg_match( "/^([0-9]{1,2})\\/([0-9]{1,2})\/([0-9]{4})$/", $row['ngsinh'], $m ) )
+            if( ! empty( $row['mobile'] ) and preg_match( "/^([0-9]{1,2})\\/([0-9]{1,2})\/([0-9]{4})$/", $row['mobile'], $m ) )
             {
-                $row['ngsinh1'] = mktime( 0, 0, 0, $m[2], $m[1], $m[3] );
+                $row['mobile1'] = mktime( 0, 0, 0, $m[2], $m[1], $m[3] );
             }
     */
     
 //Neu gia tri khong phai la so thi gan mac dinh =0
-if(!is_numeric($row['toan'])) $row['toan'] = 0;
-if(!is_numeric($row['ly'])) $row['ly'] = 0;
-if(!is_numeric($row['hoa'])) $row['hoa'] = 0;
-if(!is_numeric($row['van'])) $row['van'] = 0;
-if(!is_numeric($row['su'])) $row['su'] = 0;
-if(!is_numeric($row['dia'])) $row['dia'] = 0;
-if(!is_numeric($row['sinh'])) $row['sinh'] = 0;
-if(!is_numeric($row['anh'])) $row['anh'] = 0;
-if(!is_numeric($row['gd'])) $row['gd'] = 0;
+if(!is_numeric($row['mont'])) $row['mont'] = 1;
+if(!is_numeric($row['numlast'])) $row['numlast'] = 0;
+if(!is_numeric($row['nummont'])) $row['nummont'] = 0;
+if(!is_numeric($row['flow'])) $row['flow'] = 0;
+if(!is_numeric($row['price'])) $row['price'] = 0;
+if(!is_numeric($row['totalmont'])) $row['totalmont'] = 0;
+if(!is_numeric($row['debt'])) $row['debt'] = 0;
+if(!is_numeric($row['total'])) $row['total'] = 0;
 
 
-$sql = "INSERT INTO " . NV_PREFIXLANG . "_" . $module_data . " ( sbd, ho,ten, lop, ngsinh, phong, toan, ly, hoa, van, su, dia, sinh, anh, gd) VALUES (
-				:sbd,
-				:ho,
-				:ten,
-				:lop,
-				:ngsinh,
-				:phong,
-				:toan,
-				:ly,
-				:hoa,
-				:van,
-				:su,
-				:dia,
-				:sinh,
-				:anh,
-				:gd
+$sql = "INSERT INTO " . NV_PREFIXLANG . "_" . $module_data . " ( mkh, hoten, addold, addnew, mobile, mont, numlast, timelast, status, nummont, flow, price, totalmont, debt, total) VALUES (
+				:mkh,
+				:hoten,
+				:addold,
+				:addnew,
+				:mobile,
+				:mont,
+				:numlast,
+				:timelast,
+				:status,
+				:nummont,
+				:flow,
+				:price,
+				:totalmont,
+				:debt,
+				:total
 			)";
 
 			$data_insert = array();
 
-	$data_insert['sbd'] = $row['sbd'];
-	$data_insert['ho'] = $row['ho'];
-	$data_insert['ten'] = $row['ten'];
-	$data_insert['lop'] = $row['lop'];
-	$data_insert['ngsinh'] = $row['ngsinh'];
-	$data_insert['phong'] = $row['phong'];
-	$data_insert['toan'] = $row['toan'];
-	$data_insert['ly'] = $row['ly'];
-	$data_insert['hoa'] = $row['hoa'];
-	$data_insert['van'] = $row['van'];
-	$data_insert['su'] = $row['su'];
-	$data_insert['dia'] = $row['dia'];
-	$data_insert['sinh'] = $row['sinh'];
-	$data_insert['anh'] = $row['anh'];
-	$data_insert['gd'] = $row['gd'];
+	$data_insert['mkh'] = $row['mkh'];
+	$data_insert['hoten'] = $row['hoten'];
+	$data_insert['addold'] = $row['addold'];
+	$data_insert['addnew'] = $row['addnew'];
+	$data_insert['mobile'] = $row['mobile'];
+	$data_insert['mont'] = $row['mont'];
+	$data_insert['numlast'] = $row['numlast'];
+	$data_insert['timelast'] = $row['timelast'];
+	$data_insert['status'] = $row['status'];
+	$data_insert['nummont'] = $row['nummont'];
+	$data_insert['flow'] = $row['flow'];
+	$data_insert['price'] = $row['price'];
+	$data_insert['totalmont'] = $row['totalmont'];
+	$data_insert['debt'] = $row['debt'];
+	$data_insert['total'] = $row['total'];
 
 
 
-    if($db->insert_id( $sql, 'id', $data_insert ))
+    if($db->insert_id( $sql, 'mkh', $data_insert ))
     {
         $notice = $lang_module['error_csdl'];
     }
