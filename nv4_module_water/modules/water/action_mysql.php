@@ -17,20 +17,19 @@ $sql_drop_module[] = "DROP TABLE IF EXISTS `" . $db_config['prefix'] . "_" . $la
 $sql_create_module = $sql_drop_module;
 
 $sql_create_module[] = "CREATE TABLE " . $db_config['prefix'] . "_" . $lang . "_" . $module_data . " (
-    sbd varchar(15) NOT NULL,
-    ho varchar(100) NOT NULL,
-    ten varchar(20) NOT NULL,
-    lop varchar(10) NOT NULL,
-    ngsinh varchar(10) NOT NULL,
-    phong varchar(20) NOT NULL,
-    toan float(3) default NULL,
-    ly float(3) default NULL,
-    hoa float(3) default NULL,
-    sinh float(3) default NULL,
-    van float(3) default NULL,
-    su float(3) default NULL,
-    dia float(3) default NULL,
-    anh float(3) default NULL,
-    gd float(3) default NULL,
-    primary key (`sbd`)
+    mkh varchar(15) NOT NULL,
+    hoten varchar(100) NOT NULL,
+    addold varchar(255) NOT NULL,
+    addnew varchar(255) NOT NULL,
+    mobile varchar(15) NOT NULL,
+    numlast int(11) NOT NULL DEFAULT 0,
+	timelast varchar(50) NOT NULL,
+    status tinyint(1) NOT NULL DEFAULT 0,
+	nummont int(11) NOT NULL DEFAULT 0,
+	flow int(11) NOT NULL DEFAULT 0,
+	price int(11) NOT NULL DEFAULT 0,
+	totalmont int(11) NOT NULL DEFAULT 0,
+	debt int(11) NOT NULL DEFAULT 0,
+	total int(11) NOT NULL DEFAULT 0,
+    primary key (`mkh`)
 ) ENGINE=MyISAM";
