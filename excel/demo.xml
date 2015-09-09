@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>NGOC HIEU</Author>
+  <LastAuthor>webvang</LastAuthor>
+  <Created>2009-01-10T23:36:38Z</Created>
+  <LastSaved>2011-04-27T01:41:52Z</LastSaved>
+  <Company>Microsoft Corporation</Company>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9090</WindowHeight>
+  <WindowWidth>11355</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>180</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Times New Roman" x:Family="Roman"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="HKI">
+  <Table ss:ExpandedColumnCount="15" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:Index="2" ss:Width="108"/>
+   <Column ss:Index="5" ss:Width="114.75"/>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">MaKH</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">HỌ VÀ TÊN</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ĐỊA CHỈ CŨ</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ĐỊA CHỈ MỚI</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ĐIỆN THOẠI</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">THÁNG</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CHỈ SỐ MỚI NHẤT</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">THỜI GIAN MỚI NHẤT </Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">TÌNH TRẠNG</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CHỈ SỐ THÁNG</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">LƯU LƯỢNG</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ĐƠN GIÁ</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">TIỀN NƯỚC TRONG THÁNG</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CÔNG NỢ</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">THÀNH TIỀN</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">10TN0001</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Nguyễn Thanh Hoàng</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">B33-HL-F4Q8(587TQB)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12/3d Đường 06,Linh Xuân, Thủ Đức</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">0988455066</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">CS T8/2015</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">bình thường</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">9000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">63000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">163000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">10TN0002</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Nguyễn Thanh Hoàng</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">B33-HL-F4Q8(587TQB)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12/3d Đường 06,Linh Xuân, Thủ Đức</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">0988455066</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">CS T8/2015</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">bình thường</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">9000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">63000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">163000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">10TN0003</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Nguyễn Thanh Hoàng</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">B33-HL-F4Q8(587TQB)</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12/3d Đường 06,Linh Xuân, Thủ Đức</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">0988455066</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">CS T8/2015</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">bình thường</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">9000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">63000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">100000</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">163000</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
